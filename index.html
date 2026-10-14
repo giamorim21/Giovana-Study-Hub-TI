@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giovana Amorim Campos | Study Hub</title>
+  <meta name="description" content="Study Hub: portfólio acadêmico e profissional de Giovana Amorim Campos, estudante de Ciência da Computação com foco em Engenharia de Software e Gerenciamento de Projetos.">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Bootstrap 5.3 + Bootstrap Icons (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- CSS customizado -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Aplica o tema salvo antes da renderização (evita "flash" de tema errado) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('studyhub-theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        var theme = saved || (prefersLight ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) { /* localStorage indisponível: mantém o padrão (dark) */ }
+    })();
+  </script>
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== NAVBAR FIXA ===================== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top sh-navbar" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">
+          <i class="bi bi-braces-asterisk brand-icon" aria-hidden="true"></i>
+          Giovana <span class="brand-sep">|</span> <span class="text-gradient">Study Hub</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Mim</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#disciplinas">Disciplinas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#repositorio">Repositório GitHub</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <!-- Alternador de tema Claro/Escuro -->
+              <button id="themeToggle" class="btn btn-theme" type="button" aria-label="Alternar tema claro/escuro">
+                <i class="bi bi-sun-fill" id="themeIcon" aria-hidden="true"></i>
+                <span class="d-lg-none ms-2" id="themeLabel">Tema claro</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== HERO / APRESENTAÇÃO ===================== -->
+    <section id="inicio" class="hero d-flex align-items-center">
+      <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7">
+            <span class="badge-pill mb-3"><i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i>Ciência da Computação · 8º semestre</span>
+            <h1 class="display-4 fw-bold lh-sm mb-3">
+              Conectando <span class="text-gradient">planejamento e gestão</span> com soluções técnicas de Engenharia de Software.
+            </h1>
+            <p class="lead text-body-secondary mb-3">
+              Olá, eu sou a <strong>Giovana Amorim Campos</strong>. Estudante de Ciência da Computação no 8º semestre,
+              busco atuar na interseção entre <strong>Engenharia de Software</strong> e <strong>Gerenciamento de Projetos</strong>.
+            </p>
+            <p class="text-body-secondary mb-4">
+              Minha trajetória reúne monitoria, experiência em empresa júnior e projetos acadêmicos, sempre com atenção
+              a organização, metodologias ágeis, planejamento, boas práticas de código e arquitetura. Este Study Hub
+              documenta, de forma versionada, a minha evolução e as evidências do que aprendi.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="https://github.com/giovanaamorim/Giovana_Study_Hub_TI" data-repo target="_blank" rel="noopener noreferrer" class="btn btn-gradient btn-lg">
+                <i class="bi bi-github me-2" aria-hidden="true"></i>Ver Repositório no GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/giovana-amorime/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-accent btn-lg">
+                <i class="bi bi-linkedin me-2" aria-hidden="true"></i>Conectar no LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Painel decorativo em estilo "terminal" -->
+          <div class="col-lg-5">
+            <div class="terminal shadow-lg" role="img" aria-label="Resumo do perfil em formato de terminal">
+              <div class="terminal-bar">
+                <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                <span class="terminal-title">giovana@study-hub ~ perfil</span>
+              </div>
+              <pre class="terminal-body mb-0"><code><span class="t-muted">$</span> cat perfil.json
+{
+  <span class="t-key">"nome"</span>: <span class="t-str">"Giovana Amorim Campos"</span>,
+  <span class="t-key">"curso"</span>: <span class="t-str">"Ciência da Computação"</span>,
+  <span class="t-key">"semestre"</span>: <span class="t-num">8</span>,
+  <span class="t-key">"foco"</span>: [
+    <span class="t-str">"Engenharia de Software"</span>,
+    <span class="t-str">"Gerenciamento de Projetos"</span>
+  ],
+  <span class="t-key">"metodologia"</span>: <span class="t-str">"Ágil"</span>,
+  <span class="t-key">"status"</span>: <span class="t-str">"em evolução contínua"</span>
+}
+<span class="t-muted">$</span> <span class="cursor">▍</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE MIM / ÁREAS DE ATUAÇÃO & METODOLOGIAS ===================== -->
+    <section id="sobre" class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow">Sobre Mim</span>
+          <h2 class="fw-bold">Áreas de Atuação &amp; Metodologias</h2>
+          <p class="text-body-secondary mx-auto">Onde eu concentro meus estudos e as práticas que guiam o modo como eu planejo, construo e entrego software.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="card sh-card h-100">
+              <div class="card-body p-4">
+                <div class="icon-box mb-3"><i class="bi bi-kanban" aria-hidden="true"></i></div>
+                <h3 class="h5 fw-bold">Gerenciamento de Projetos</h3>
+                <p class="text-body-secondary">Visão estruturada para transformar objetivos em entregas.</p>
+                <ul class="check-list">
+                  <li>Planejamento e controle de prazos e recursos</li>
+                  <li>Organização de processos</li>
+                  <li>Levantamento e gestão de requisitos</li>
+                  <li>Visão ágil (Scrum e Kanban)</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card sh-card h-100">
+              <div class="card-body p-4">
+                <div class="icon-box mb-3"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
+                <h3 class="h5 fw-bold">Engenharia de Software</h3>
+                <p class="text-body-secondary">Qualidade e sustentabilidade em todo o ciclo de vida do software.</p>
+                <ul class="check-list">
+                  <li>Versionamento com Git e GitHub</li>
+                  <li>Arquitetura de sistemas</li>
+                  <li>Qualidade e testes</li>
+                  <li>Documentação clara e boas práticas de código</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <article class="card sh-card h-100">
+              <div class="card-body p-4">
+                <div class="icon-box mb-3"><i class="bi bi-cpu" aria-hidden="true"></i></div>
+                <h3 class="h5 fw-bold">Competências Técnicas</h3>
+                <p class="text-body-secondary">Ferramentas e tecnologias que utilizo no dia a dia.</p>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="tech-tag"><i class="bi bi-cup-hot me-1" aria-hidden="true"></i>Java</span>
+                  <span class="tech-tag"><i class="bi bi-leaf me-1" aria-hidden="true"></i>Spring</span>
+                  <span class="tech-tag"><i class="bi bi-hexagon me-1" aria-hidden="true"></i>Node.js</span>
+                  <span class="tech-tag"><i class="bi bi-plug me-1" aria-hidden="true"></i>REST APIs</span>
+                  <span class="tech-tag"><i class="bi bi-git me-1" aria-hidden="true"></i>Git</span>
+                  <span class="tech-tag"><i class="bi bi-clipboard-check me-1" aria-hidden="true"></i>Modelagem de Requisitos</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJETOS EM DESTAQUE (04_Projetos_e_Certificados) ===================== -->
+    <section id="projetos" class="section section-alt">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow">04_Projetos_e_Certificados</span>
+          <h2 class="fw-bold">Projetos em Destaque</h2>
+          <p class="text-body-secondary mx-auto">Use os filtros para explorar por área e clique em “Detalhes” para ver mais informações técnicas.</p>
+        </div>
+
+        <!-- Filtros dinâmicos (os botões são gerados/ligados no script.js) -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="projectFilters" role="group" aria-label="Filtrar projetos por área">
+          <button type="button" class="btn btn-filter active" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" class="btn btn-filter" data-filter="eng" aria-pressed="false">Engenharia de Software</button>
+          <button type="button" class="btn btn-filter" data-filter="gestao" aria-pressed="false">Gestão &amp; Requisitos</button>
+          <button type="button" class="btn btn-filter" data-filter="mobile" aria-pressed="false">Mobile/Back-end</button>
+        </div>
+
+        <!-- Cards renderizados via JavaScript a partir do array PROJECTS -->
+        <div class="row g-4" id="projectGrid" aria-live="polite"></div>
+        <p class="text-center text-body-secondary mt-4 d-none" id="projectEmpty">Nenhum projeto nesta categoria por enquanto.</p>
+      </div>
+    </section>
+
+    <!-- ===================== TRILHA ACADÊMICA ===================== -->
+    <section id="disciplinas" class="section">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow">02_Disciplinas_Cursadas · 03_Disciplinas_em_Curso</span>
+          <h2 class="fw-bold">Trilha Acadêmica e Evidências de Aprendizado</h2>
+          <p class="text-body-secondary mx-auto">Mapa das disciplinas com as evidências práticas registradas no repositório. Clique em um cartão para ver os detalhes.</p>
+        </div>
+
+        <!-- Linha do tempo com cards (renderizada via JavaScript a partir do array COURSES) -->
+        <div class="timeline" id="courseTimeline"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ANATOMIA DO REPOSITÓRIO ===================== -->
+    <section id="repositorio" class="section section-alt">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow">Git na prática</span>
+          <h2 class="fw-bold">Anatomia do Repositório</h2>
+          <p class="text-body-secondary mx-auto">
+            O repositório <code>Giovana_Study_Hub_TI</code> foi organizado em pastas numeradas, que contam a história acadêmica de forma
+            clara e navegável, e cada evolução passa pelo fluxo de versionamento do Git.
+          </p>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <!-- Estrutura de pastas -->
+          <div class="col-lg-6">
+            <div class="card sh-card h-100">
+              <div class="card-body p-4">
+                <h3 class="h5 fw-bold mb-3"><i class="bi bi-folder2-open me-2 text-accent" aria-hidden="true"></i>Estrutura de pastas</h3>
+                <ul class="repo-tree list-unstyled mb-0">
+                  <li class="tree-root"><i class="bi bi-github" aria-hidden="true"></i> Giovana_Study_Hub_TI/</li>
+                  <li>
+                    <i class="bi bi-folder-fill" aria-hidden="true"></i> <code>01_Apresentacao_e_Perfil</code>
+                    <span class="tree-desc">Quem sou eu: perfil, currículo e apresentação.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-folder-fill" aria-hidden="true"></i> <code>02_Disciplinas_Cursadas</code>
+                    <span class="tree-desc">Códigos, protótipos e artigos de disciplinas concluídas.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-folder-fill" aria-hidden="true"></i> <code>03_Disciplinas_em_Curso</code>
+                    <span class="tree-desc">Evidências em andamento, atualizadas a cada semana.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-folder-fill" aria-hidden="true"></i> <code>04_Projetos_e_Certificados</code>
+                    <span class="tree-desc">Projetos completos e certificações.</span>
+                  </li>
+                  <li class="tree-file"><i class="bi bi-file-earmark-text" aria-hidden="true"></i> <code>README.md</code></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boas práticas -->
+          <div class="col-lg-6">
+            <div class="card sh-card h-100">
+              <div class="card-body p-4">
+                <h3 class="h5 fw-bold mb-3"><i class="bi bi-patch-check me-2 text-accent" aria-hidden="true"></i>Boas práticas adotadas</h3>
+                <ul class="check-list mb-0">
+                  <li><strong>Nomes numerados</strong> que definem uma ordem de leitura lógica.</li>
+                  <li><strong>Commits pequenos e descritivos</strong> que contam a evolução do trabalho.</li>
+                  <li><strong>README</strong> como porta de entrada para quem visita o repositório.</li>
+                  <li><strong>Separação por contexto</strong>: perfil, estudo e entrega em pastas distintas.</li>
+                  <li><strong>GitHub Pages</strong> publicando este portfólio diretamente do repositório.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fluxo de versionamento -->
+        <h3 class="h5 fw-bold text-center mb-4">Fluxo de versionamento</h3>
+        <div class="git-flow row g-3 align-items-stretch justify-content-center">
+          <div class="col-md-6 col-xl-3">
+            <div class="flow-step h-100">
+              <div class="flow-icon"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
+              <h4 class="h6 fw-bold">Working Directory</h4>
+              <p class="small text-body-secondary mb-2">Onde edito e crio os arquivos no computador.</p>
+              <code class="flow-cmd">editar arquivos</code>
+            </div>
+          </div>
+          <div class="col-xl-auto flow-arrow" aria-hidden="true"><i class="bi bi-arrow-right-circle-fill"></i></div>
+          <div class="col-md-6 col-xl-3">
+            <div class="flow-step h-100">
+              <div class="flow-icon"><i class="bi bi-inbox" aria-hidden="true"></i></div>
+              <h4 class="h6 fw-bold">Staging Area</h4>
+              <p class="small text-body-secondary mb-2">Seleciono o que irá para o próximo commit.</p>
+              <code class="flow-cmd">git add .</code>
+            </div>
+          </div>
+          <div class="col-xl-auto flow-arrow" aria-hidden="true"><i class="bi bi-arrow-right-circle-fill"></i></div>
+          <div class="col-md-6 col-xl-3">
+            <div class="flow-step h-100">
+              <div class="flow-icon"><i class="bi bi-hdd" aria-hidden="true"></i></div>
+              <h4 class="h6 fw-bold">Git Local</h4>
+              <p class="small text-body-secondary mb-2">O histórico é registrado no repositório local.</p>
+              <code class="flow-cmd">git commit -m "mensagem"</code>
+            </div>
+          </div>
+          <div class="col-xl-auto flow-arrow" aria-hidden="true"><i class="bi bi-arrow-right-circle-fill"></i></div>
+          <div class="col-md-6 col-xl-3">
+            <div class="flow-step h-100">
+              <div class="flow-icon"><i class="bi bi-cloud-upload" aria-hidden="true"></i></div>
+              <h4 class="h6 fw-bold">GitHub Remoto</h4>
+              <p class="small text-body-secondary mb-2">Publico o trabalho e o deixo acessível a todos.</p>
+              <code class="flow-cmd">git push origin main</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="https://github.com/giovanaamorim/Giovana_Study_Hub_TI" data-repo target="_blank" rel="noopener noreferrer" class="btn btn-gradient">
+            <i class="bi bi-github me-2" aria-hidden="true"></i>Explorar o repositório
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== RODAPÉ / CONTATO ===================== -->
+  <footer id="contato" class="sh-footer">
+    <div class="container py-5">
+      <div class="row gy-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="h4 fw-bold mb-2">Vamos conversar?</h2>
+          <p class="text-body-secondary mb-0">
+            O Study Hub é um projeto vivo: cada commit representa um passo na minha evolução contínua na carreira de TI.
+            Fique à vontade para entrar em contato para trocar ideias, oportunidades ou feedback.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+            <a class="btn btn-outline-accent" href="mailto:giamorim2101@gmail.com"><i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>giamorim2101@gmail.com</a>
+            <a class="btn btn-outline-accent" href="https://www.linkedin.com/in/giovana-amorime/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin me-2" aria-hidden="true"></i>LinkedIn</a>
+            <a class="btn btn-outline-accent" href="https://github.com/giovanaamorim/Giovana_Study_Hub_TI" data-repo target="_blank" rel="noopener noreferrer"><i class="bi bi-github me-2" aria-hidden="true"></i>GitHub</a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small text-body-secondary">
+        <span>&copy; <span id="year">2026</span> Giovana Amorim Campos. Todos os direitos reservados.</span>
+        <span>Feito com HTML, CSS, Bootstrap e JavaScript · <i class="bi bi-code-slash" aria-hidden="true"></i> evolução contínua</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL DE DETALHES (projetos e disciplinas) ===================== -->
+  <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content sh-modal">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span class="eyebrow mb-1 d-block" id="detailModalKicker"></span>
+            <h3 class="modal-title h4 fw-bold" id="detailModalTitle"></h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body" id="detailModalBody"></div>
+        <div class="modal-footer border-0 pt-0" id="detailModalFooter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão "voltar ao topo" -->
+  <button id="backToTop" class="btn btn-gradient back-to-top" type="button" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Bootstrap JS (bundle com Popper) e script da página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
