@@ -1,10 +1,6 @@
 # Study Hub | Ciência da Computação 🚀
 ### Portfólio Acadêmico e Profissional — Giovana Amorim Campos
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-6366f1?style=for-the-badge&logo=github)](https://giovanaamorim.github.io/Giovana_Study_Hub_TI/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/giovana-amorime/)
-[![Status](https://img.shields.io/badge/Status-Em%20Evolu%C3%A7%C3%A3o%20Cont%C3%ADnua-22c55e?style=for-the-badge)](#)
-
 ---
 
 ## 📌 Sobre o Projeto
